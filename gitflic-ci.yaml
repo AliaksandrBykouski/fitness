@@ -1,0 +1,19 @@
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  script:
+  - npm ci
+  - npm run build
+  artifacts:
+    paths:
+      - dist/
+
+deploy:
+  stage: deploy
+  script:
+    - scp -r dist/** k92004rm@k92004rm.beget.tech:asupstudent.ru/public_html/vite
+  only:
+    - main
