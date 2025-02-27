@@ -1,0 +1,93 @@
+@use "../helpers/functions" as *;
+@use "../helpers/mixins" as *;
+@use "../helpers/variables" as *;
+@use "../helpers/media" as *;
+.header{
+  background-color: var(--color-dark-alt);
+  padding-inline: rem(32);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: rem(20);
+  // делаем небольшую тень для разделения шапки
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 0 1rem var(--color-dark-gray);
+  animation-name: scrolling-header;
+  animation-fill-mode: both;
+  scroll-timeline: auto;
+  animation-range: rem(100) rem(200);
+  @keyframes scrolling-header {
+    to {
+      box-shadow: 0 0 1rem var(--color-ligth-gray);
+    }
+  }
+  @include tablet {
+    padding-block: rem(20);
+    padding-inline: rem(20);
+  }
+  @include mobile {
+    padding-block: rem(15);
+    padding-inline: rem(15);
+  }
+  &__overlay{
+    @include tablet-above {
+      display: contents;
+    }
+    @include tablet {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      row-gap: 3rem;
+      padding: 1rem;
+      background-color: var(--color-dark);
+      transition-duration: var(--transition-duration);
+      &:not(.is-active) {
+        @include hide;
+        translate: 100%;
+      }
+    }
+  }
+  &-logo {
+    flex-shrink: 0;
+  }
+  &__menu-list {
+    display: flex;
+    column-gap: rem(50);
+    @include tablet {
+      column-gap: rem(20);
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &__menu-link {
+    height: rem(90);
+    display: inline-flex;
+    align-items: center;
+    column-gap: rem(7);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: rem(14);
+    font-weight: 700;
+    letter-spacing: rem(1.2);
+    &.is-active:after {
+      content: '';
+      display: block;
+      width: rem(5);
+      aspect-ratio: 1;
+      background-color: currentColor;
+      border-radius: 50%;
+    }
+  }
+  &__actions {
+    display: flex;
+    column-gap: rem(40);
+    @include  tablet {
+      column-gap: rem(20);
+    }
+  }
+
+}

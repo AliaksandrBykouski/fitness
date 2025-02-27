@@ -1,0 +1,50 @@
+@use "../helpers/functions" as *;
+@use "../helpers/mixins" as *;
+@use "../helpers/media" as *;
+@use "../helpers/variables" as *;
+@use "fonts";
+html {
+  &.is-lock {
+    overflow: hidden; // чтобы не было скролла
+  }
+}
+body{
+  font-family: var(--font-family-base), sans-serif;
+  background-color: var(--color-dark);
+  color: var(--color-dark-gray);
+  font-size: rem(16);
+  line-height: 1.75;
+}
+.container {
+  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
+}
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+a, {
+  color: var(--color-ligth);
+  @include hover {
+    color: var(--color-ligth-gray);
+  }
+}
+a, button, input, textarea, svg * {
+  transition-duration: var(--transition-duration);
+}
+button {
+  @include hover {
+    color: var(--color-ligth-gray);
+  }
+}
+.visible-mobile {
+  //видно  олько на мобилке
+  @include tablet-above {
+    display: none !important;
+  }
+}
+.visually-hidden {
+  //скрыть элемент от пользователя
+  @include visually-hidden;
+}

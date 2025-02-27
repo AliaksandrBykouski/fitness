@@ -8,8 +8,122 @@
   <title>Kroop Fit</title>
 </head>
 <body>
+  <header class="header" data-js-header >
+    <a aria-label="Home" class="header-logo" href="/" title="Home">
+      <img src="img/logo/header-logo-kropp.png.svg"
+           class="header-logo__img"
+           alt="Kroop Fit"
+           width="135"
+           height="25"
+           loading="lazy">
+    </a>
+   <div class="header__overlay" data-js-header-overlay>
+     <nav class="header__menu">
+       <ul class="header__menu-list">
+         <li class="header__menu-item ">
+           <a href="/"
+              class="header__menu-link is-active"
+              data-scroll-to="about">
+             Home
+           </a>
+         </li>
+         <li class="header__menu-item">
+           <a href="#"
+              class="header__menu-link"
+              data-scroll-to="services">
+             Pages
+           </a>
+         </li>
+         <li class="header__menu-item">
+           <a href="#"
+              class="header__menu-link"
+              data-scroll-to="trainers">
+             Portfolio
+           </a>
+         </li>
+         <li class="header__menu-item">
+           <a href="#"
+              class="header__menu-link"
+              data-scroll-to="contact">
+             Blog
+           </a>
+         </li>
+         <li class="header__menu-item">
+           <a href="#"
+              class="header__menu-link"
+              data-scroll-to="contact">
+             Shop
+           </a>
+         </li>
+       </ul>
+     </nav>
+   </div>
+    <div class="header__actions">
+      <button class="header-book-button button" type="button">Book now
+      </button>
+      <button
+        aria-label="Open menu"
+        class="header__burger-button  burger-button visible-mobile"
+        data-js-header-burger-button
+        title="Open menu"
+        type="button">
+        <span class="visually-hidden">Open menu</span>
+        <span class="header__burger-button--line"></span>
+        <span class="header__burger-button--line"></span>
+        <span class="header__burger-button--line"></span>
+      </button>
+    </div>
+  </header>
+<main class="content">
+  <h1 class="visually-hidden">Kroop Fitness Club</h1>
+  <section class="banner">
+    <h2 class="visually-hidden">Crossfit</h2>
+    <div class="banner__body">
+      <div class="banner__info">
+        New event <br>
+        coming up / <time datetime="06-07">june 7 </time> &nbsp; - &nbsp; <time datetime="06-13">13</time>
+      </div>
+      <h3 class="banner__title">Crossfit</h3>
+    </div>
+    <div class="banner__pagination">
+      <ul class="banner__pagination-list">
+        <li class="banner__pagination-item">
+          <button class="banner__pagination-button" type="button">
 
+          </button>
+        </li>
+        <li class="banner__pagination-item">
+          <button class="banner__pagination-button" type="button">
 
+          </button>
+        </li>
+        <li class="banner__pagination-item">
+          <button class="banner__pagination-button is-active" type="button">
+
+          </button>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="motivation">
+    <h2 class="visually-hidden">Motivation</h2>
+    <ul class="motivation__list">
+      <li class="motivation__item">
+        <div class="motivation__card container">
+          <div class="motivation__card-body"></div>
+          <img
+            src="img/motivation-1.jpg"
+            alt="fitness-man"
+            width="518"
+            height="760"
+            class="motivation__card-image"
+            loading="lazy">
+        </div>
+      </li>
+
+    </ul>
+  </section>
+</main>
 <script type="module" src="js/main.js"></script>
 </body>
 </html>
