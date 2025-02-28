@@ -1,0 +1,26 @@
+@use "../helpers/functions" as *;
+@use "../helpers/mixins" as *;
+@use "../helpers/variables" as *;
+@use "../helpers/media" as *;
+
+.input {
+  width: 100%;
+  height: var(--input-height);
+  padding-inline: rem(25);
+  padding-block: rem(15);
+  background-color: transparent;
+  border: rem(1) solid var(--color-dark-gray);
+  border-radius: var(--border-radius);
+  color: var(--color-ligth);
+  &::placeholder {
+    color: var(--color-ligth-gray);
+  }
+  &:hover {
+    border-color: var(--color-ligth);
+  }
+  &:focus {
+    outline: none;
+    color: var(--color-dark);
+    background-color: var(--color-ligth-gray);
+  }
+}

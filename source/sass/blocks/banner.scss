@@ -5,7 +5,7 @@
 
 .banner {
   padding: rem(36) rem(70);
-  min-height: rem(985);
+  min-height: calc(100vh - var(--header-height));
   display: flex;
   justify-content: end;
   flex-direction: column;
@@ -41,7 +41,9 @@
       width: fluid(194, 80);
       aspect-ratio: 1;
       background: url("../../img/icon/arrow-white.svg") center/contain no-repeat;
-
+      @include mobile {
+        margin-right: rem(17);
+      }
     }
 
   }

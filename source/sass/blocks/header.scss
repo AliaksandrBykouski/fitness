@@ -3,6 +3,7 @@
 @use "../helpers/variables" as *;
 @use "../helpers/media" as *;
 .header{
+  min-height: var(--header-height);
   background-color: var(--color-dark-alt);
   padding-inline: rem(32);
   display: flex;
@@ -24,11 +25,10 @@
     }
   }
   @include tablet {
-    padding-block: rem(20);
+    padding-block: rem(25);
     padding-inline: rem(20);
   }
   @include mobile {
-    padding-block: rem(15);
     padding-inline: rem(15);
   }
   &__overlay{
@@ -64,7 +64,7 @@
     }
   }
   &__menu-link {
-    height: rem(90);
+    height: var(--header-height);
     display: inline-flex;
     align-items: center;
     column-gap: rem(7);
