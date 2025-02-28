@@ -68,21 +68,22 @@ button {
     background: url("../../img/icon/plus.svg") center center/contain no-repeat;
   }
   &::after {
-    content: attr(data-title);
+    content: attr(data-title);//получаем значение атрибута data-title и вставляем его в псевдоэлемент after
     position: absolute;
     z-index: -1;
     font-size: 2.8em;
     font-family: var(--font-family-accent), sans-serif;
+    line-height: 1;
     color: transparent;
     -webkit-text-stroke: rem(1) var(--color-ligth-gray);
     left: -0.7em;
-    top: -0.45em;
+    top: -0.3em;
     @include laptop {
       font-size: 1.8em;
     }
   }
   &.centered::after { //чтобы отцентрировать псевдоэлемент
-    top: -0.55em;
+    top: -0.3em;
     left: 50%;
     translate: -50% 0;
   }
