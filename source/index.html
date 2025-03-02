@@ -325,8 +325,9 @@
           <label for="activity" class="visually-hidden">Activity</label>
           <select id="activity" class="calculate__input input wide" required>
             <option value="" disabled selected>Activity factor</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
+            <option value="1.2">Sedentary</option>
+            <option value="1.55">Moderate</option>
+            <option value="1.9">Active</option>
           </select>
         </div>
         <button class="calculate__button button transparent" type="submit">Calculate</button>
@@ -342,26 +343,35 @@
       </tr>
       </thead>
       <tbody>
-      <tr>
-        <td>Below 18.5</td>
-        <td>Underweight</td>
-      </tr>
-      <tr>
-        <td>18.5 - 24.9</td>
-        <td>Healthy</td>
-      </tr>
-      <tr>
-        <td>25.0 - 29.9</td>
-        <td>Overweight</td>
-      </tr>
-      <tr>
-        <td>30.0 - and Above</td>
-        <td>Obese</td>
-      </tr>
+<!--        <tr>-->
+<!--        <td>Below 18.5</td>-->
+<!--        <td>Underweight</td>-->
+<!--      </tr>-->
+<!--        <tr>-->
+<!--        <td>18.5 - 24.9</td>-->
+<!--        <td>Healthy</td>-->
+<!--      </tr>-->
+<!--        <tr>-->
+<!--        <td>25.0 - 29.9</td>-->
+<!--        <td>Overweight</td>-->
+<!--      </tr>-->
+<!--        <tr>-->
+<!--        <td>30.0 - and Above</td>-->
+<!--        <td>Obese</td>-->
+<!--      </tr>-->
       </tbody>
       <tfoot>
       <tr>
-        <td colspan="2"><b>MR</b>  Metabolic Rate / <b>BMI</b>  Body Mass Index</td>
+        <td colspan="2"><b>BMI</b> Индекс массы тела  / <b>MR</b> Metabolic Rate </td>
+      </tr>
+      <tr>
+        <td colspan="2"><b>BMR</b> Базовый уровень метаболизма  / <b>TDEE</b> Общий уровень энергозатрат </td>
+      </tr>
+      <tr>
+        <td colspan="2"><b>IBW</b> Идеальный вес   / <b> BFP</b> Процент жира в организме </td>
+      </tr>
+      <tr>
+        <td colspan="2"><b>LBM</b> Масса без жира   / <b> TBW</b> Общий объем воды в теле </td>
       </tr>
       </tfoot>
     </table>
@@ -369,6 +379,68 @@
 </div>
   </section>
 </main>
+  <footer class="footer container">
+    <header class="footer__header">
+      <img src="img/logo/header-logo-kropp.png.svg" alt="logo" class="footer__header-logo" width="270" height="50">
+      <h4 class="footer__header-subtitle">please feel free to send us an e-mail at <a href="mailto:">kropp@qodeinteractive.com</a> For any additional inquiries</h4>
+    </header>
+    <div class="footer__wrapper">
+      <ul class="footer__list">
+        <li class="footer__item">
+          <h4 class="footer__title">About</h4>
+          <div class="footer__description">
+            <p>Shape up your site with Kropp,
+              a theme especially made for
+              fitness & gym websites.</p>
+          </div>
+        </li>
+        <li class="footer__item">
+          <h4 class="footer__title">Working hours</h4>
+          <div class="footer__description">
+            <p>Monday - Friday <br> 05:30 - 24:00.</p>
+            <p>Weekdays <br> 00:00 - 24:00.</p>
+          </div>
+        </li>
+        <li class="footer__item">
+          <h4 class="footer__title">Location</h4>
+          <div class="footer__description">
+            <address>68 Jay Street, Brooklyn,
+              NY 11201, <br> United States</address>
+            <div class="footer__contacts">
+              <a href="mailto:kropp@qodeinteractive.com">kropp@qodeinteractive.com</a>
+              <a href="tel:+17184076400">+ (1) 718 - 407 - 6400</a>
+            </div>
+          </div>
+        </li>
+        <li class="footer__item">
+          <h4 class="footer__title arrow">start now</h4>
+          <div class="footer__description">
+            <a href="mailto:kropp@qodeinteractive.com">
+              <button class="footer__button button transparent">Email</button>
+            </a>
+            <div class="footer__soc1als">
+              <a href="https://www.tiktok.com/@yourprofile" target="_blank" class="footer__soc1als-link">
+                <img src="img/icon/tictok.svg" alt="icon-tiktok" width="20" height="21">
+              </a>
+              <a href="https://www.youtube.com/c/yourchannel" target="_blank" class="footer__soc1als-link">
+                <img src="img/icon/youtube.svg" alt="icon-youtube" width="24" height="21">
+              </a>
+              <a href="https://www.instagram.com/yourprofile" target="_blank" class="footer__soc1als-link">
+                <img src="img/icon/insta.svg" alt="icon-instagram" width="21" height="21">
+              </a>
+              <a href="https://www.facebook.com/yourprofile" target="_blank" class="footer__soc1als-link">
+                <img src="img/icon/facebook.svg" alt="icon-facebook" width="21" height="21">
+              </a>
+              <a href="https://twitter.com/yourprofile" target="_blank" class="footer__soc1als-link">
+                <img src="img/icon/twitter.svg" alt="icon-twitter" width="21" height="21">
+              </a>
+            </div>
+
+          </div>
+        </li>
+      </ul>
+    </div>
+  </footer>
 <script type="module" src="js/main.js"></script>
 </body>
 </html>

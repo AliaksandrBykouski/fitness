@@ -1,0 +1,109 @@
+@use "../helpers/functions" as *;
+@use "../helpers/mixins" as *;
+@use "../helpers/variables" as *;
+@use "../helpers/media" as *;
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(60);
+  padding-block: rem(150);
+  @include tablet {
+    padding-block: rem(80);
+  }
+
+  &__header {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    column-gap: rem(62);
+    @include mobile {
+      flex-direction: column;
+      row-gap: rem(20);
+    }
+
+    &-subtitle {
+      max-width: rem(965);
+      font-size: fluid(22, 16);
+      font-weight: 300;
+      text-align: left;
+      text-transform: uppercase;
+
+      a {
+        text-decoration: none;
+        @include hover {
+          color: var(--color-ligth-gray);
+        }
+      }
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: rem(30);
+    color: var(--color-ligth);
+    font-weight: 300;
+    @include mobile {
+      grid-template-columns: 1fr 1fr;
+      row-gap: rem(30);
+    }
+    @include mobile-s {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(15);
+    max-width: rem(300);
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(5);
+
+    a {
+      text-decoration: none;
+      @include hover {
+        color: var(--color-ligth-gray);
+      }
+    }
+  }
+
+  &__title {
+    display: flex;
+    column-gap: rem(8);
+    position: relative;
+    font-size: fluid(22, 16);
+    font-weight: 700;
+    text-align: left;
+    text-transform: uppercase;
+
+    &.arrow::after {
+      content: '';
+      position: absolute;
+      width: rem(20);
+      aspect-ratio: 1;
+      right: 50%;
+      bottom: rem(10);
+      background: url("../../img/icon/arrow-small.svg") center/contain no-repeat;
+      @include laptop {
+        display: none;
+      }
+    }
+  }
+
+  &__button {
+    width: 100%;
+  }
+
+  &__description
+  &__soc1als {
+    margin-top: rem(30);
+    display: flex;
+    column-gap: rem(20);
+  }
+}
