@@ -1,19 +1,18 @@
-@use 'helpers/variables';
-@use 'base/fonts';
-@use 'import/normalize';
-
-@use 'helpers/mixins';
-@use 'helpers/media';
-@use 'base/main';
-@use 'blocks/buttons';
-@use 'blocks/header';
-@use 'blocks/banner';
-@use 'blocks/motivation';
-@use 'blocks/training';
-@use 'blocks/joinus';
-@use 'blocks/input';
-@use 'blocks/location';
-@use 'blocks/family';
-@use 'blocks/calculate';
-@use 'blocks/footer';
+@use "helpers/variables";
+@use "base/fonts";
+@use "import/normalize";
+@use "helpers/mixins";
+@use "helpers/media";
+@use "base/main";
+@use "blocks/buttons";
+@use "blocks/header";
+@use "blocks/banner";
+@use "blocks/motivation";
+@use "blocks/training";
+@use "blocks/joinus";
+@use "blocks/input";
+@use "blocks/location";
+@use "blocks/family";
+@use "blocks/calculate";
+@use "blocks/footer";
 

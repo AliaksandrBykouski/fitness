@@ -11,23 +11,18 @@
   flex-direction: column;
   color: var(--color-ligth);
   background-color: var(--color-dark-alt);
-
   @include laptop {
     padding: rem(36) rem(30);
   }
-
   @include tablet {
     padding: rem(30) rem(20);
   }
-
   @include mobile {
     padding: rem(26) rem(10);
   }
-
   @include mobile-s {
     padding: rem(16) rem(5);
   }
-
   &__body {
     text-transform: uppercase;
   }
@@ -41,16 +36,16 @@
     line-height: 1.27;
 
     &::before {
-      content: "";
+      content: '';
       margin-right: rem(30);
       width: fluid(194, 80);
       aspect-ratio: 1;
-      background: url("/icon/arrow-white.svg") center/contain no-repeat;
-
+      background: url("../../img/icon/arrow-white.svg") center/contain no-repeat;
       @include mobile {
         margin-right: rem(17);
       }
     }
+
   }
 
   &__title {
@@ -62,6 +57,7 @@
     &-list {
       display: flex;
       justify-content: center;
+
     }
 
     &-item {
@@ -77,7 +73,7 @@
       padding: rem(7);
 
       &::after {
-        content: "";
+        content: '';
         width: rem(10);
         aspect-ratio: 1;
         border: var(--border);
@@ -94,4 +90,5 @@
       }
     }
   }
+
 }

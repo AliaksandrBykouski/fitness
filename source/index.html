@@ -213,19 +213,36 @@
     </ul>
   </section>
   <section class="joinus">
-    <div class="joinus__video-wrapper">
-      <video
-        src=""
-        class="joinus__video"
+    <div class="joinus__video-wrapper" id="videoContainer">
+<!--      <video-->
+<!--        src=""-->
+<!--        class="joinus__video"-->
+<!--        width="960"-->
+<!--        height="600"-->
+<!--        poster="img/poster.jpg"-->
+<!--      ></video>-->
+      <img
         width="960"
         height="600"
-        poster="img/poster.jpg"
-      ></video>
+        src="img/poster.jpg"
+        alt="poster"
+        id="poster">
       <button
+        id="playButton"
+        onclick="playVideo()"
         class="joinus__video-button"
         type="button">
         play
       </button>
+      <div class="joinus__video-body" id="player" style="display: none;">
+        <iframe
+          allowfullscreen
+          frameborder="0"
+          height="400"
+          src="https://www.youtube.com/embed/XgI_p8bKg78?enablejsapi=1"
+          width="100%">
+        </iframe>
+      </div>
     </div>
     <div class="joinus__body container">
       <h2 class="joinus__title">Join Us</h2>
@@ -441,6 +458,6 @@
       </ul>
     </div>
   </footer>
-<script type="module" src="js/main.js"></script>
+<script type="module" src="js/main.js" defer></script>
 </body>
 </html>

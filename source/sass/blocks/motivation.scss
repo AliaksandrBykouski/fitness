@@ -2,52 +2,63 @@
 @use "../helpers/functions" as *;
 @use "../helpers/mixins" as *;
 @use "../helpers/media" as *;
+
 .motivation {
   &__item {
     &:nth-child(even) {
       background-color: var(--color-dark-alt);
+
       .motivation__card {
         @include mobile-above {
           flex-direction: row-reverse;
         }
-
       }
     }
   }
+
   &__card {
     display: flex;
     justify-content: center;
     align-items: center;
     column-gap: fluid(200, 40);
-    @include mobile{
+
+    @include mobile {
       flex-direction: column-reverse;
       padding-block: rem(50);
       row-gap: rem(50);
     }
+
     &-image {
       width: fluid(520, 350);
       height: fluid(760, 450);
       margin-block: rem(-30);
+
       @include laptop-above {
         margin-block: rem(-60);
       }
     }
+
     &-body {
       margin-left: rem(15);
+
       @include tablet {
         margin-left: rem(35);
       }
     }
+
     &-description {
       max-width: rem(400);
       color: var(--color-ligth-gray);
+
       &:not(:last-child) {
         margin-bottom: rem(37);
+
         @include mobile {
           margin-bottom: rem(17);
         }
       }
     }
+
     &-title {
       &:not(:last-child) {
         margin-bottom: rem(14);

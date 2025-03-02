@@ -5,17 +5,34 @@
 
 .joinus {
   background-color: var(--color-dark-alt);
+
   &__video {
     width: 100%;
     max-width: rem(960);
     height: auto;
+    &-body {
+      width: 100%;
+      max-width: rem(960);
+      position: relative; /* Ширина контейнера 100% */
+      padding-bottom: 56.25%; /* Соотношение сторон 16:9 */
+      height: 0;      /* Высота по умолчанию 0 */
+      overflow: hidden;
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;    /* Ширина 100% от родительского контейнера */
+        height: 100%;
+      }
+    }
+
     &-wrapper {
       position: relative;
       padding: rem(150) rem(30);
       display: flex;
       justify-content: center;
       align-items: center;
-      background: url("../../img/joinus_bg.jpg") center/cover no-repeat var(--color-dark-alt);
+      background: url("/joinus_bg.jpg") center/cover no-repeat var(--color-dark-alt);
     }
 
     &-button {
@@ -36,9 +53,11 @@
       color: var(--color-ligth);
       border: var(--border);
       border-radius: 100%;
+
       @include hover {
         background-color: var(--color-ligth-gray);
         color: var(--color-dark);
+
         &::after {
           filter: invert(1);
         }
@@ -50,35 +69,41 @@
         aspect-ratio: 1;
         right: rem(60);
         text-decoration: var(--transition-duration);
-        background: url("../../img/icon/top-right-arrow.svg") center/contain no-repeat;
+        background: url("/icon/top-right-arrow.svg") center/contain no-repeat;
       }
+
       @include mobile {
         width: rem(100);
       }
     }
   }
+
   &__body {
     padding-bottom: rem(150);
   }
+
   &__title {
     position: relative;
     margin-top: -0.4em;
     font-size: fluid(180, 55);
     line-height: 1;
     text-align: center;
+
     &::after {
-      content: '';
+      content: "";
       height: 0.7em;
       aspect-ratio: 1;
       display: inline-block;
-      background: url("../../img/icon/arrow-white.svg") center/contain no-repeat;
+      background: url("/icon/arrow-white.svg") center/contain no-repeat;
       scale: 1 -1;
       margin-left: 0.14em;
     }
+
     &:not(:last-child) {
       margin-bottom: rem(130);
     }
   }
+
   &__form {
     &-header {
       display: flex;
@@ -87,23 +112,28 @@
       align-items: center;
       row-gap: rem(8);
       color: var(--color-ligth);
+
       &:not(:last-child) {
         margin-bottom: rem(52);
       }
     }
+
     &-title {
       font-size: fluid(60, 30);
       font-weight: 700;
     }
+
     &-subtitle {
       font-size: fluid(20, 16);
       line-height: 1.65;
       font-weight: 300;
       text-transform: uppercase;
     }
+
     &-input {
       max-width: rem(400);
     }
+
     &-body {
       display: flex;
       justify-content: center;
@@ -116,5 +146,4 @@
       }
     }
   }
-
 }

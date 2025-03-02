@@ -12,19 +12,24 @@
   border: rem(1) solid var(--color-dark-gray);
   border-radius: var(--border-radius);
   color: var(--color-ligth);
+
   &::placeholder {
     color: var(--color-ligth-gray);
   }
+
   &:hover {
     border-color: var(--color-ligth);
   }
+
   &:focus {
     outline: none;
     color: var(--color-dark);
     background-color: var(--color-ligth-gray);
   }
 }
+
 //красим placeholder в серый цвет и select  где не выбрано значение
-.input::placeholder, select.input:invalid {
+.input::placeholder,
+ select.input:invalid {
   color: var(--color-ligth-gray);
 }

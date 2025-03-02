@@ -1,20 +1,17 @@
 @use "sass:math";
-@use "functions" as *;
+@use 'functions' as *;
 
 @mixin square($size) {
   width: $size;
   height: $size;
 }
-
 @mixin fluid-text($max: 48, $min: 16) {
   font-size: fluid($max, $min);
 }
-
 @mixin hide {
   opacity: 0;
   visibility: hidden;
 }
-
 @mixin visually-hidden {
   position: absolute !important;
   width: 1px !important;

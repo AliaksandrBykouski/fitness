@@ -3,83 +3,60 @@
 @use "../helpers/media" as *;
 @use "../helpers/variables" as *;
 @use "fonts";
-
 html {
   &.is-lock {
     overflow: hidden; // чтобы не было скролла
   }
 }
-
-body {
+body{
   font-family: var(--font-family-base), sans-serif;
   background-color: var(--color-dark);
   color: var(--color-dark-gray);
   font-size: rem(16);
   line-height: 1.75;
 }
-
 .container {
   max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
   margin-inline: auto;
   padding-inline: var(--container-padding-x);
 }
-
-h1,
- h2,
- h3,
- h4,
- h5,
- h6 {
+h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   font-weight: 700;
   color: var(--color-ligth);
 }
-
 a, {
   color: var(--color-ligth);
-
   @include hover {
     color: var(--color-ligth-gray);
   }
 }
-
-a,
- button,
- input,
- textarea,
- svg * {
+a, button, input, textarea, svg * {
   transition-duration: var(--transition-duration);
 }
-
 button {
   @include hover {
     color: var(--color-ligth-gray);
   }
 }
-
 .visible-mobile {
   //видно  олько на мобилке
   @include tablet-above {
     display: none !important;
   }
 }
-
 .visually-hidden {
   //скрыть элемент от пользователя
   @include visually-hidden;
 }
-
 .title-medium {
   @include fluid-text(40, 24);
-
   line-height: 1.3;
   color: var(--color-ligth);
 }
-
 .backdrop-title {
   position: relative;
   z-index: 2;
-
   &::before {
     content: "";
     display: block;
@@ -88,9 +65,8 @@ button {
     aspect-ratio: 1;
     top: 0;
     right: calc(100% + #{rem(8)});
-    background: url("/icon/plus.svg") center center/contain no-repeat;
+    background: url("../../img/icon/plus.svg") center center/contain no-repeat;
   }
-
   &::after {
     content: attr(data-title);//получаем значение атрибута data-title и вставляем его в псевдоэлемент after
     position: absolute;
@@ -102,19 +78,16 @@ button {
     -webkit-text-stroke: rem(1) var(--color-ligth-gray);
     left: -0.7em;
     top: -0.3em;
-
     @include laptop {
       font-size: 1.8em;
     }
   }
-
   &.centered::after { //чтобы отцентрировать псевдоэлемент
     top: -0.3em;
     left: 50%;
     translate: -50% 0;
   }
 }
-
 p:not(:last-child) {
   margin-bottom: rem(24);
 }

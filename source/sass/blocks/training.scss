@@ -10,20 +10,24 @@
   padding-bottom: rem(120);
   background-color: var(--color-dark);
   margin-inline: auto;
+
   &__list {
     display: grid;
     align-items: center;
     grid-template-columns: repeat(6, 1fr);
     gap: rem(60);
+
     @include laptop {
       grid-template-columns: repeat(3, 1fr);
-      gap: rem(45)
+      gap: rem(45);
     }
+
     @include mobile {
       grid-template-columns: repeat(2, 1fr);
       gap: rem(30);
     }
   }
+
   &__item {
     --paddingSize: #{rem(80)};
 
@@ -33,21 +37,23 @@
     row-gap: rem(32);
     align-self: end;
     padding-top: var(--paddingSize);
-    background: url("../../img/icon/arrow-down-left.svg") 80% 0/var(--paddingSize) no-repeat;
+    background: url("/icon/arrow-down-left.svg") 80% 0/var(--paddingSize) no-repeat;
 
     @include tablet {
       row-gap: rem(20);
     }
+
     @include mobile {
       --paddingSize: #{rem(60)};
     }
+
     &-title {
       font-size: rem(16);
       text-transform: uppercase;
       font-weight: 700;
-
     }
   }
+
   &__img {
     height: rem(150);
   }
