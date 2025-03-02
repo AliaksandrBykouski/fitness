@@ -91,6 +91,7 @@
     position: relative;
     border-collapse: collapse; //убираем отступы между ячейками
     th {
+      width: 50%;
       padding-block: rem(20);
       text-align: left;
       text-transform: uppercase;
