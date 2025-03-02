@@ -24,3 +24,7 @@
     background-color: var(--color-ligth-gray);
   }
 }
+//красим placeholder в серый цвет и select  где не выбрано значение
+.input::placeholder, select.input:invalid {
+  color: var(--color-ligth-gray);
+}

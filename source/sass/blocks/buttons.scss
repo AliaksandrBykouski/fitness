@@ -39,12 +39,12 @@
   &.is-active {
     //ворочаем при клике
     .header__burger-button--line {
-      &:nth-child(1) {
+      &:nth-child(2) {
         rotate: 45deg;
         transform-origin: 0;
         translate: 0.25em -0.1em;
       }
-      &:nth-child(2) {
+      &:nth-child(3) {
         rotate: -45deg;
       }
       &:last-child {

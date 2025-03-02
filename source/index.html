@@ -275,6 +275,99 @@
 
 
   </section>
+  <section class="family">
+    <header class="family__header container">
+      <h2 class="family__title title-big backdrop-title centered" data-title="part">be a part of our fit family</h2>
+      <div class="family__description">
+        <p>Training helps you think and feel better. join us!</p>
+      </div>
+    </header>
+    <div class="family__body container-wide">
+      <img src="img/family/1.jpg" alt="man" width="414" height="479" class="family__image">
+      <img src="img/family/2.jpg" alt="man" width="744" height="479" class="family__image">
+      <img src="img/family/3.jpg" alt="man" width="396" height="479" class="family__image">
+      <img src="img/family/4.jpg" alt="man" width="404" height="479" class="family__image">
+      <img src="img/family/5.jpg" alt="man" width="414" height="479" class="family__image">
+    </div>
+  </section>
+  <section class="calculate">
+<div class="calculate__inner container">
+  <div class="calculate__body">
+    <h2 class="calculate__title title-medium backdrop-title" data-title="BMI">Input your BMI</h2>
+    <div class="calculate__description">
+      <p>Duo graece ponderum ne, ei mel aliquando. Pro te tamquam nonumes, nam no nemore epicurei</p>
+      <form  class="calculate__form">
+        <div class="calculate__form-body">
+          <label class="visually-hidden" for="height">Height</label>
+          <input
+            class="calculate__input input"
+            placeholder="Height / cm"
+            type="number"
+            id="height">
+          <label class="visually-hidden" for="weight">Weight</label>
+          <input
+            class="calculate__input input"
+            placeholder="Weight / kg"
+            type="number"
+            id="weight">
+          <label class="visually-hidden" for="age">Age</label>
+          <input
+            class="calculate__input input"
+            placeholder="Age"
+            type="number"
+            id="age">
+          <label for="gender" class="visually-hidden">Gender</label>
+          <select id="gender" class="calculate__input input required">
+            <option value="" disabled selected>Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+          <label for="aktivity" class="visually-hidden">Activity</label>
+          <select id="aktivity" class="calculate__input input wide" required>
+            <option value="" disabled selected>Activity factor</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+          </select>
+        </div>
+        <button class="calculate__button button transparent" type="submit">Calculate</button>
+      </form>
+    </div>
+  </div>
+  <div class="calculate__wrapper">
+    <table class="calculate__table">
+      <thead>
+      <tr>
+        <th>BMI</th>
+        <th>Weight status</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Below 18.5</td>
+        <td>Underweight</td>
+      </tr>
+      <tr>
+        <td>18.5 - 24.9</td>
+        <td>Healthy</td>
+      </tr>
+      <tr>
+        <td>25.0 - 29.9</td>
+        <td>Overweight</td>
+      </tr>
+      <tr>
+        <td>30.0 - and Above</td>
+        <td>Obese</td>
+      </tr>
+      </tbody>
+      <tfoot>
+      <tr>
+        <td colspan="2"><b>MR</b>  Metabolic Rate / <b>BMI</b>  Body Mass Index</td>
+      </tr>
+      </tfoot>
+    </table>
+  </div>
+</div>
+  </section>
 </main>
 <script type="module" src="js/main.js"></script>
 </body>
